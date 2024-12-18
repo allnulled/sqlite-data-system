@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sqlite-data-system</title>
+    <script src="sql-wasm.js"></script>
+    <script src="sqlite-data-system.bundled.js"></script>
+</head>
+<body>
+    <h3>sqlite-data-system</h3>
+    <div>
+        <pre id="testresult">...</pre>
+    </div>
+    <script>
+        window.addEventListener("load", async function() {
+            const $datasys = SqliteDataSystem.create()
+            const schema = await $datasys.rest.getSchema()
+            document.getElementById("testresult").textContent = JSON.stringify(schema, null, 2);
+        });
+    </script>
+</body>
+</html>

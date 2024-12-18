@@ -1,0 +1,19 @@
+{
+  "name": "@allnulled/sqlite-data-system",
+  "version": "1.0.0",
+  "description": "Auth and Rest data system with sqlite for node.js and browser through the same API.",
+  "main": "dist/sqlite-data-system.unbundled.js",
+  "scripts": {
+    "build": "node build.js && npm run test",
+    "test": "npx mocha test/auth.js && npx mocha test/rest.js && npx http-server -c-1 test/browser -o"
+  },
+  "keywords": [],
+  "author": "allnulled",
+  "license": "WTFPL",
+  "devDependencies": {
+    "@allnulled/simplebundler": "^1.0.0"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  }
+}
