@@ -10,14 +10,27 @@ Auth and Rest data system with sqlite for node.js and browser through the same A
 npm i -s sqlite-data-system
 ```
 
+Then in javascript:
+
+```js
+const SqliteDataSystem = require("@allnulled/sqlite-data-system");
+const datasys = SqliteDataSystem.create();
+```
+
 ### In browser
 
 ```html
-    <script src="sql-wasm.js"></script>
-    <script src="sqlite-data-system.bundled.js"></script>
+<script src="sql-wasm.js"></script>
+<script src="sqlite-data-system.bundled.js"></script>
 ```
 
-Also, move files `test/browser/sql-wasm.js` and `test/browser/sql-wasm.wasm` to the same directory of the `*.html` you are using them in.
+Then in javascript:
+
+```js
+const datasys = window.SqliteDataSystem.create();
+```
+
+Also, move **both files** `test/browser/sql-wasm.js` and `test/browser/sql-wasm.wasm`, one beside the other, to the same directory of the `*.html` you are using them in, so you can load the sqlite for the browser library, which works with `*.wasm` file.
 
 ## Usage
 
