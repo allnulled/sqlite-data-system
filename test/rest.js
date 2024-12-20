@@ -21,8 +21,8 @@ describe("sqlite-data-system rest api test", function () {
       await rest.insert({
         table: "users",
         items: [
-          { name: "Alice", age: 25 },
-          { name: "Bob", age: 30 },
+          { name: "Alice", password: 25 },
+          { name: "Bob", password: 30 },
         ]
       });
 
@@ -35,7 +35,7 @@ describe("sqlite-data-system rest api test", function () {
       await rest.update({
         table: "users",
         values: {
-          age: 26
+          password: 26
         },
         where: [["name", "=", "Alice"]]
       });
@@ -43,7 +43,7 @@ describe("sqlite-data-system rest api test", function () {
       // Eliminar datos
       await rest.delete({
         table: "users",
-        where: [["age", "=", 30]]
+        where: [["password", "=", 30]]
       });
 
       console.log(await rest.select({

@@ -4,8 +4,10 @@
   "description": "Auth and Rest data system with sqlite for node.js and browser through the same API.",
   "main": "dist/sqlite-data-system.unbundled.js",
   "scripts": {
-    "build": "node build.js && npm run test",
-    "test": "npx mocha test/auth.js && npx mocha test/rest.js && npx http-server -c-1 test/browser -o"
+    "build": "node build.js && npm run test:nodejs",
+    "test": "npm run build && npm run test:nodejs && npm run test:browser",
+    "test:nodejs": "npx mocha test/auth.js && npx mocha test/rest.js",
+    "test:browser": "npx http-server -c-1 test/browser -o"
   },
   "keywords": [],
   "author": "allnulled",
@@ -15,5 +17,8 @@
   },
   "dependencies": {
     "sqlite3": "^5.1.7"
+  },
+  "directories": {
+    "test": "test"
   }
 }
