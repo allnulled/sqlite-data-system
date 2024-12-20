@@ -7,7 +7,7 @@ Auth and Rest data system with sqlite for node.js and browser through the same A
 ### In node.js
 
 ```sh
-npm i -s sqlite-data-system
+npm i -s @allnulled/sqlite-data-system
 ```
 
 Then in javascript:
@@ -20,8 +20,8 @@ const datasys = SqliteDataSystem.create();
 ### In browser
 
 ```html
-<script src="sql-wasm.js"></script>
-<script src="sqlite-data-system.bundled.js"></script>
+<script src="node_modules/@allnulled/sqlite-data-system/dist/sql-wasm.js"></script>
+<script src="node_modules/@allnulled/sqlite-data-system/dist/sqlite-data-system.bundled.js"></script>
 ```
 
 Then in javascript:

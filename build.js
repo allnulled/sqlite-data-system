@@ -12,4 +12,4 @@ require("@allnulled/simplebundler").bundle({
   id: "SqliteDataSystem"
 });
 
-require("fs").copyFileSync(__dirname + "/dist/sqlite-data-system.bundled.js", __dirname + "/test/browser/sqlite-data-system.bundled.js")
+require("fs").copyFileSync(__dirname + "/dist/sqlite-data-system.bundled.js", __dirname + "/test/browser/sqlite-data-system.bundled.js");
