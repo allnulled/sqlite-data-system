@@ -1,6 +1,6 @@
 {
   "name": "@allnulled/sqlite-data-system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Auth and Rest data system with sqlite for node.js and browser through the same API.",
   "main": "dist/sqlite-data-system.unbundled.js",
   "scripts": {
